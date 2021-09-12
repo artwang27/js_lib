@@ -68,7 +68,9 @@ class Game {
     //當成功讀入工作分配檔
     readJsonFileOk() {
         let doc = this.textFileReader.doc;  //讀到的檔案內容被存在 textFileReader.doc
-        let records = JSON.parse(doc).records;   //取出 records
+        let table = JSON.parse(doc);   //轉為 table
+        // print2(table.records);
+        this.run( table.records);
     }
 }
 */
